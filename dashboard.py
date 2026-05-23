@@ -1090,28 +1090,28 @@ def render_charts_row(data):
         st.markdown('<div class="tp-chart-card">', unsafe_allow_html=True)
         st.plotly_chart(
             chart_company_mentions(tuple(data.company_counts.items())),
-            use_container_width=True, config={"displayModeBar": False}
+            width="stretch", config={"displayModeBar": False}
         )
         st.markdown('</div>', unsafe_allow_html=True)
     with c2:
         st.markdown('<div class="tp-chart-card">', unsafe_allow_html=True)
         st.plotly_chart(
             chart_categories(tuple(data.cat_counts.items())),
-            use_container_width=True, config={"displayModeBar": False}
+            width="stretch", config={"displayModeBar": False}
         )
         st.markdown('</div>', unsafe_allow_html=True)
     with c3:
         st.markdown('<div class="tp-chart-card">', unsafe_allow_html=True)
         st.plotly_chart(
             chart_sentiment(pos, neg, neu),
-            use_container_width=True, config={"displayModeBar": False}
+            width="stretch", config={"displayModeBar": False}
         )
         st.markdown('</div>', unsafe_allow_html=True)
     with c4:
         st.markdown('<div class="tp-chart-card">', unsafe_allow_html=True)
         st.plotly_chart(
             chart_regions(tuple(data.region_counts.items())),
-            use_container_width=True, config={"displayModeBar": False}
+            width="stretch", config={"displayModeBar": False}
         )
         st.markdown('</div>', unsafe_allow_html=True)
 
@@ -1122,7 +1122,7 @@ def render_charts_row(data):
         scores = tuple(a.importance_score for a in articles)
         st.plotly_chart(
             chart_score_distribution(scores),
-            use_container_width=True, config={"displayModeBar": False}
+            width="stretch", config={"displayModeBar": False}
         )
         st.markdown('</div>', unsafe_allow_html=True)
     with c6:
@@ -1130,7 +1130,7 @@ def render_charts_row(data):
         dates = tuple(a.published_at for a in articles if a.published_at)
         st.plotly_chart(
             chart_timeline(dates),
-            use_container_width=True, config={"displayModeBar": False}
+            width="stretch", config={"displayModeBar": False}
         )
         st.markdown('</div>', unsafe_allow_html=True)
 
@@ -1205,7 +1205,7 @@ def render_article_table(data):
     df = pd.DataFrame(rows)
     st.dataframe(
         df,
-        use_container_width=True,
+        width="stretch",
         height=450,
         column_config={
             "URL":      st.column_config.LinkColumn("URL", display_text="Open →"),
@@ -1306,7 +1306,7 @@ def render_dashboard(data):
         df = pd.DataFrame(rows)
         st.dataframe(
             df,
-            use_container_width=True,
+            width="stretch",
             height=420,
             column_config={
                 "URL":      st.column_config.LinkColumn("URL", display_text="Open →"),
