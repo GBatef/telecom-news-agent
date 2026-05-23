@@ -1,0 +1,47 @@
+# ─────────────────────────────────────────────
+# Dashboard
+# ─────────────────────────────────────────────
+streamlit>=1.35.0
+plotly>=5.20.0
+pandas>=2.0.0
+
+# ─────────────────────────────────────────────
+# Groq AI (free summarization)
+# ─────────────────────────────────────────────
+groq>=0.9.0
+python-dotenv>=1.0.0
+
+# ─────────────────────────────────────────────
+# Core scraping
+# ─────────────────────────────────────────────
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=5.0.0          # faster HTML parser for BeautifulSoup
+feedparser>=6.0.10   # RSS/Atom feed parsing
+
+# ─────────────────────────────────────────────
+# AI / NLP
+# ─────────────────────────────────────────────
+transformers>=4.40.0          # BART summarization model
+torch>=2.2.0                  # PyTorch backend (CPU-only install: pip install torch --index-url https://download.pytorch.org/whl/cpu)
+sentencepiece>=0.1.99         # tokenizer dependency for some models
+
+# Claude API backend (optional — only needed if SUMMARIZER_BACKEND="claude")
+anthropic>=0.34.0
+
+# ─────────────────────────────────────────────
+# Scheduling
+# ─────────────────────────────────────────────
+schedule>=1.2.0
+
+# ─────────────────────────────────────────────
+# Report generation
+# ─────────────────────────────────────────────
+# PDF export (optional — comment out if not needed)
+# weasyprint>=62.0
+
+# ─────────────────────────────────────────────
+# Utilities
+# ─────────────────────────────────────────────
+python-dateutil>=2.9.0        # robust date parsing
+chardet>=5.0.0                # character encoding detection
