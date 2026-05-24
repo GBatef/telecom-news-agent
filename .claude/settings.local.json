@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(python -c \"import ast, pathlib; files=['config.py','scraper.py','company_detector.py','summarizer.py','categorizer.py','report_generator.py','main.py']; [print\\(f'OK: {f}'\\) or ast.parse\\(pathlib.Path\\(f\\).read_text\\(encoding='utf-8'\\)\\) for f in files]; print\\('All files parse cleanly.'\\)\")",
-      "Bash(venv/Scripts/streamlit run *)",
-      "Bash(git add *)"
-    ]
-  }
-}
