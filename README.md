@@ -18,7 +18,7 @@ Includes a **Streamlit dashboard** with interactive charts and **free AI summari
 ### Or use the terminal
 
 ```powershell
-cd "C:\Users\goubaa\Desktop\NET IA agent"
+cd "C:\Users\pc\Desktop\NET IA agent"
 .\venv\Scripts\activate
 
 # Launch dashboard
